@@ -1991,6 +1991,7 @@ input[type='checkbox'] {
 
 .quantity__input[type='number'] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .quantity__rules {
@@ -3595,3 +3596,11 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* --------------- custom edits ------------- */
+
+/* .bg-image {
+  background-image: url('/assets/test.png');
+  background-size: cover;
+  background-position: center;
+} */

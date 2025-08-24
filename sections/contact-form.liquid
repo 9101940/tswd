@@ -14,7 +14,11 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }} gradient bg-image"
+  {% if section.settings.background_image %}
+    style="background-image: url({{ section.settings.background_image | image_url }}); background-size: cover; background-position: center;"
+  {% endif %}
+  >
   <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -185,6 +189,11 @@
       "default": "scheme-1"
     },
     {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image",
+    },
+    {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
@@ -211,7 +220,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.contact-form.presets.name"
+      "name": "t:sections.contact-form.presets.name",
     }
   ]
 }
