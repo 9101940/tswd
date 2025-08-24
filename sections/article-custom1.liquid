@@ -1,0 +1,29 @@
+<div class="custom-article">
+  <h2>{{ section.settings.intro_text }}</h2>
+  <p>{{ section.settings.middle_text }}</p>
+  <p>{{ section.settings.closing_text }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Article Layout 1",
+  "class": "custom-article1",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "intro_text",
+      "label": "Intro text"
+    },
+    {
+      "type": "richtext",
+      "id": "middle_text",
+      "label": "Middle text"
+    },
+    {
+      "type": "richtext",
+      "id": "closing_text",
+      "label": "Closing text"
+    }
+  ]
+}
+{% endschema %}
